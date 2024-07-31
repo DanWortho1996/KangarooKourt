@@ -1,0 +1,464 @@
+# all imports: 
+import sys,time,random
+import os
+import sys
+from datetime import date
+from datetime import datetime
+
+
+# all variables:
+name = input
+karma = 0
+num = 11
+
+
+
+#all lists:
+
+list_question1 = [
+    "I met him one week ago on .... ",
+    "I met him once in my life , just short romance..you know... ",
+    "We had a couple of beers at the pub and that all what I remember... ",
+    "I never see him before!I swear!!! "]
+list_question2 = [
+    "I was at home,I really dont know anyting ",
+    "I was in town center last night, just walking around ",
+    "As I said.. I was drinking beer at the pub..and actually I don't remember anything"]
+
+list_question3 = [
+    "He's my sparring partner at the gym ",
+    "I went on a few dates with him but nothing came of it, he was a little jumpy ",
+    "I dont know him, i've never met him.  "
+]    
+
+# main functions:
+# scores of player
+
+def lose_karma():
+    global karma
+    karma -= 5
+def gain_karma():
+    global karma
+    karma += 5
+# printing text one by one letter
+def print_slow(txt):
+        for letter in txt:
+                sys.stdout.write(letter)
+                sys.stdout.flush()
+                time.sleep(0.01)
+#  printing list with index 
+def list_serial(list):
+    for index in range(len(list)):
+        print(str(index + 1) + ". " + list[index])
+    print("\n")
+    return ""
+#  current date
+today = date.today()
+current_date = today.strftime("%B %d, %Y")
+#  current time
+now = datetime.now()
+current_time = now.strftime("%H:%M:%S")
+
+
+#intro
+print("\033[0;1;35;40m")
+print("kang          kang")
+print("kang         kang")
+print("kang        kang")
+print("kang       kang")
+print("kang      kang")
+print("kang     kang")
+print("kang    kang")
+print("kang   kang")
+print("kang  kang")
+print("kang kang")
+print("kang  kang")
+print("kang   kang")
+print("kang    kang")
+print("kang     kang            aroo aroo       kang kang      kang    aroo aroo aroo       kang kang")
+print("kang      kang          aroo   aroo      kang  kang     kang   aroo                 kang   kang")
+print("kang       kang        aroo     aroo     kang   kang    kang  aroo                 kang     kang")
+print("kang        kang      aroo  kan  aroo    kang    kang   kang  aroo   aroo aroo    kang  kan  kang")
+print("kang         kang    aroo         aroo   kang     kang  kang   aroo       aroo   kang         kang")
+print("kang          kang  aroo           aroo  kang      kang kang    aroo aroo aroo  kang           kang")
+print("\033[0;31;40m")
+print("-----------------------------------------------------------------------------------------------------")
+print("\033[1;32;40m")
+print("                            aroo aro aroo    kang kan kan    aro ar aroo")
+print("                            aroo      aroo  kang      kang  aroo     aroo")
+print("                            aroo aro aroo   kang kan  kang  aroo aro aroo")
+print("                            aroo  aroo      kang   ka kang  aroo  ar aroo")
+print("                            aroo   aroo     kang      kang  aroo     aroo")
+print("                            aroo    aroo     kang kan kan    aro ar aroo")
+print("\033[0;31;40m")
+print("-----------------------------------------------------------------------------------------------------")
+print("\033[1;33;40m")
+print("kang         kang")
+print("kang        kang")
+print("kang       kang")
+print("kang      kang")
+print("kang     kang")
+print("kang    kang")
+print("kang   kang")
+print("kang  kang")
+print("kang kang")
+print("kang  kang")
+print("kang   kang")
+print("kang    kang")
+print("kang     kang       aro ar aroo   kang          kang  aroo aro aroo   kang kang kang")
+print("kang      kang     aroo     aroo  kang          kang  aroo      aroo       kang")
+print("kang       kang    aroo aro aroo  kang          kang  aroo aro aroo        kang")
+print("kang        kang   aroo  ar aroo  kang          kang  aroo    aroo         kang")
+print("kang         kang  aroo     aroo  kang          kang  aroo     aroo        kang")
+print("kang          kang  aro ar aroo    kang kan ka kang   aroo      aroo       kang")
+print("--------------------------------------------------------------------------------------------")
+def intro():
+    print_slow("\033[1;34;40mBAILIFF: 'All rise!'\n")
+    print("\n")
+    print_slow("\033[0;37;40mAround you, the entire court sprouts to their feet. You follow suit - noticeably slower.\n")
+    print("\n")
+    print_slow(f"\033[1;34;40mBAILIFF: 'Hear ye, hear ye. {current_date} at {current_time}\n")
+    print("\n")
+    print_slow("\033[0;37;40mThe JUDGE enters the room. Slowly, he walks up to his podium, towering over the court and planting himself down.\n")
+    print("\n")
+    print_slow("\033[1;34;40mBAILIFF: All persons having business before the San Diego Zoo's Court of California. Draw near and ye shall be heard. JUDGE SOLOMON SCOFFMAN presiding.\n")
+    print("\n")
+    print_slow("\033[0;37;40mThe JUDGE fusses around in his seat before proceeding.\n")
+    print("\n")
+    print_slow("\033[1;32;40mJUDGE: 'Be seated.'\n")
+    print("\n")
+    print_slow("\033[0;37;40mIn unison, everyone except you sits, leaving you awkwardly standing. You hesitantly sit back down hoping no one noticed.\n")
+    print("\n")
+    print_slow("\033[1;32;40mJUDGE: Transcriber, please call the case.\n")
+    print("\n")
+    print_slow("\033[1;35;40mTRANSCRIBER: '40 SD 130. San Diego Zoo Court V... hmm. That's strange. There's no name.'\n")
+    print("\n")
+    global name
+    name = input("\033[1;32;40mJUDGE: Will the defendant please rise and state their name.\n")
+    print("\n")
+    print_slow(f"\033[1;32;40mJUDGE: {name}, well then, please take your seat.\n")
+    print("\n")
+    print_slow("\033[0;37;40mYou plonk back down in your seat\n")
+    print("\n")
+    print_slow("\033[1;32;40mJUDGE: Are the people ready to make their opening arguments?\n")
+    print("\n")
+    print_slow("\033[1;31;40mPROSECUTOR: We are, your honour.\n")
+print("\n")
+intro()
+def opening_statements():
+    print_slow("\033[0;37;40mThe PROSECUTOR jumps to her feet, striding to the centre of the courtroom. Turning to her right, she looks at the jury. They all stare in anticipation.\n" )
+print("\n")
+print_slow("\033[0;37;40mThe PROSECUTOR jumps to her feet, striding to the centre of the courtroom. Turning to her right, she looks at the jury. They all stare in anticipation.\n" )
+print("\n")
+print_slow("\033[1;31;40mPROSECUTOR: Ladies and gentlemen, thank you for all coming in today. As you know, a horrific crime has occurred.\n")
+print("\n")
+print_slow("\033[0;37;40mShe looks down in shame.\n")
+print("\n")
+print_slow("\033[1;31;40mPROSECUTOR: Our most beloved Joey was kidnapped.\n")
+print("\n")
+print_slow("\033[0;37;40mThe Jury gasp!\n")
+print("\n")
+print_slow("\033[1;31;40mPROSECUTOR: And we believe they are to blame!\n")
+print("\n")
+print_slow("\033[0;37;40mShe points at YOU!\n")
+print("\n")
+print_slow("\033[1;31;40mPROSECUTOR: For this the crime of kidnapping of a marsupial, we call for the ultimate punishment...\n")
+print_slow("\033[0;37;40m...\n")
+print_slow("\033[1;31;40mPROSECUTOR:'EXECUTION!'\n")
+print("\n")
+print_slow("\033[0;37;40mAs she returns to her seat, you feel a prod to your left side, to which you see a smirking balding man with gigantic circular glasses. He is dressed in an ill-fitting, heavily worn, brown suit with a bright yellow and purple polka dot tie.\n")
+print("\n")
+print_slow(f"\033[1;33;40mLAWYER: Hey {name}, don't worry, we've got this case. Now listen up, it's going to be tough but I've done my research. See, I've got this kangaroo theory and am well versed in kangaroo law\n")
+print("\n")
+def choice1():
+    print("\033[0;37;40mYour eyes almost roll out of your head.\n")
+def choice2():
+    print("\033[0;37;40mYou sob uncontrollably.\n")
+print("\n")
+choice = input("\033[0;37;40mType 1 to roll eyes, Type 2 to cry.\n ")
+print("\n")
+if choice == "1":
+    choice1()
+elif choice == "2":
+    choice2()
+else:
+    print("\033[0;37;40mPlease pick from either 1 or 2.")
+    choice()
+def choice1():
+    print_slow("\033[0;37;40mYou roll your eyes.\n")
+def choice2():
+    print_slow("\033[0;37;40mYou sob uncontrollably.\n")
+print("\n")
+print_slow("\033[1;33;40mLAWYER: Anyway, what kind of approach do you want to take for your opening statement?\n")
+print("\n")
+print_slow("\033[0;37;40mYou are presented with three options: \n")
+print_slow("\033[0;37;40m1. aggressive\n")
+print_slow("\033[0;37;40m2. sympathetic\n")
+print_slow("\033[0;37;40m3. let him decide\n")
+print("\n")
+
+def choice1():
+    print_slow("\033[0;37;40m Show them who's boss!")
+    print("\n")
+    print_slow("\033[1;33;40mLAWYER: Gotcha buddy! Don't worry, I'm a pro!")
+    print("\n")
+    print_slow("\033[0;37;40mThe LAWYER skips over towards the jury.")
+    print("\n")
+    print_slow("\033[1;33;40mLAWYER: Joey was beloved by all. My client was a good friend of his. To even dare think they are involved in Joey’s kidnapping is an insult!\n The LAWYER raises his arms in a dramatic effect.\n LAWYER: Do you know who this is? They are a war hero! A Nobel prize winner at the age of 9 and an Academy award at 10!. This trial is nonsense and should be acquitted immediately. He turns to you and winks at you with confidence.")
+    print("\n")
+    print_slow("\033[0;37;40mThe jury think he is absolutely insane.")
+    print_slow(("\n"))
+def choice2():
+    print_slow("\033[0;37;40mKeep on crying.")
+    print("\n")
+    print_slow("\033[1;33;40mLAWYER: Gotcha buddy! Don't worry, I'm a pro!")
+    print("\n")
+    print_slow("\033[0;37;40mThe LAWYER skips over towards the jury.")
+    print("\n")
+    print_slow(f"\033[1;33;40mLAWYER: Joey was the best of us. His bounce was that of legend. We all loved him, especially my client, {name}. The prosecution is trying to make them a scapegoat. We must acquit {name} so that we can find the true kidnapper!'")
+    print("\n")
+    print_slow("The jury is all leaning in, completely captivated by your defences eloquent words.")
+    print_slow("\n")
+def choice3():
+    print_slow("\033[0;37;40mGood luck.")
+    print("\n")
+    print_slow("\033[1;33;40mLAWYER: Gotcha buddy! Don't worry, I'm a pro!")
+    print("\n")
+    print_slow("\033[0;37;40mThe LAWYER skips over towards the jury.")
+    print("\n")
+    print_slow("\033[1;33;40mLAWYER: What animal jumps when it walks and sits when it stands? \n")
+    print("\n")
+    print_slow("\033[0;37;40mThe court is silent.")
+    print("")
+    print_slow("\033[0;37;40m'Kanga-'")
+    print("")
+    print_slow("\033[1;33;40mLAWYER: That’s right! A Kangaroo!\n")
+    print("\n")
+    print_slow("\033[0;37;40mHe bakes in the non-existent laughter.\n")
+    print("\n")
+    print_slow("\033[1;33;40mLAWYER: Now that we are all having a good time. My client didn’t do it.")
+    print("\n")
+    print_slow("\033[0;37;40mThe jury is thoroughly confused but doesn’t seem to be swayed either way.")
+    print("\n")
+    print_slow("\033[0;37;40mThe LAWYER returns to his seat with his thumbs up and a smirk.")
+    print("\n")
+choice = input()
+if choice == "1":
+    lose_karma()
+    choice1()
+elif choice == "2":
+    gain_karma()
+    choice2()
+elif choice == "3":
+    choice3()
+else:
+    print("\033[0;37;40mPlease pick 1,2 or 3.")
+    choice()
+    print_slow("Karma:",karma)
+choice = input()
+if choice == "1":
+    choice1()
+elif choice == "2":
+    choice2()
+elif choice == "3":
+    choice3()
+else:
+    print("\033[0;37;40mPlease pick 1,2 or 3.")
+    choice()
+print("\n")
+
+#Q1
+def question1():
+    # \033[0;37;40m white
+    # \033[1;31;40m red
+    global karma
+    print_slow(f"\033[1;31;40m When was the last time that You met the Kangaroo, {name} ? ")
+    print("\n\033[0;37;40m")
+    # time.sleep(1)
+    print_slow(list_serial(list_question1))
+    anwser1 = int(input())
+    if anwser1 == 1:
+        gain_karma()
+    elif anwser1 == 2:
+        gain_karma()
+    elif anwser1 == 3:
+        lose_karma()
+    elif anwser1 == 4:
+        lose_karma()
+    else:
+        print_slow("Respect for the Judge! answer the question!!!")
+        print("\n")
+        question1()
+    print("\033[1;31;40m Thank you..")
+    print("\n")
+question1()
+
+# Q2
+def question2():
+    global karma
+    print_slow(f"\033[1;31;40m Where have You been, {name} last night?")
+    print("\n\033[0;37;40m")
+    # time.sleep(1)
+    print_slow(list_serial(list_question2))
+    anwser2= int(input())
+    if anwser2 == 1:
+        gain_karma()
+    elif anwser2 == 2:
+        lose_karma()
+    elif anwser2 == 3:
+        lose_karma()
+    else:
+        print_slow("Respect for the Judge! answer the question!!!")
+        print("\n")
+        question2()
+    
+    print("\033[1;31;40m Thank you..")
+    print("\n")
+question2()
+
+#Q3
+def question3():
+    global karma
+    print_slow("\033[1;31;40m What was your relationship with the Kangaroo? ")
+    print("\n\033[0;37;40m")
+    print_slow(list_serial(list_question3))
+    answer3 = int(input())
+    if answer3 == 1:
+        gain_karma()
+    elif answer3 == 2:
+        gain_karma()
+    elif answer3 == 3:
+        lose_karma()
+    else:
+        print_slow("Respect for the Judge! answer the question!!!")
+        print("\n")
+        question3()
+    print("\033[1;31;40m Thank you..")
+    print("\n")
+question3()
+#Q4
+
+def question4():
+    global karma
+    print_slow("\033[1;31;40mIs this the first time you have been here3 before {name}")
+    print("\n")
+    print("\033[0;37;40m")
+    print_slow(list_serial(list_question3))
+    choice = input()
+    if choice() == 1:
+        gain_karma()
+        print("1. No I visited just arond two weeks now, maybe. ")
+    elif choice() == 2:
+        gain_karma()
+        print("2. Yes and now I'm here...")
+    elif choice() == 3:
+        lose_karma()
+        print("I've never been here until recently. ")
+    else:
+        print_slow("Respect for the Judge! answer the question!!!")
+        print("\n")
+        question4()
+    print("\033[1;31;40m Thank you..")
+    print("\n")
+question4()
+# Q4
+
+
+#closing statement #plead guilty #plead not guilty
+
+def closing_statement():
+    global karma
+    print_slow("\033[1;31;40mJudge: Does the defendant have anything to say? ")
+    print("\n\033[0;37;40m")
+choice = input()
+if choice == input():
+    print("Game on.")
+    print("\n")
+elif choice() == 1:
+    (gain_karma)
+    print("I'm outta here! Got a Mystery train to catch")
+    print("\n")
+elif choice() == 2:
+    (lose_karma)
+    print("Oh no.")
+    print("\n")
+elif choice() == 3:
+    (lose_karma)
+    print("Please choose 1 or 2.")
+    print("\n")
+else:
+    print_slow("Respect the jusge you WIESEL!!!")
+    print("\n")
+
+# Type1
+print("033\[1;37;40mLAWYER:The defendant belives he is not guilty in commiting this crime and believes that such accussations are false, they would like to leave the court now.")
+
+# Type2
+print("\033[1;36;40mLAWYERThe defendant pleads guilty as they tried keep this crime hidden any longer knowing that we all loved our beloved Joey.")
+
+#verdict
+def counting():
+    global num
+    space= "                                        "
+    space2="        "
+    while num > 1:
+            num-=1
+            time.sleep(1) 
+            if num >= 9:
+                    print(f"\033[1;34;40m")
+            if num <= 8:        
+                    print(f"\033[1;32;40m")
+            if num <= 6:
+                    print(f"\033[1;35;40m")
+            if num <= 3:
+                    print(f"\033[1;31;40m")
+            print(f"{space} -----------------")
+            print(f"{space}|{space2}{space2} |")
+
+            print(f"{space}|{space2}{num}{space2}|")
+            print(f"{space}| {space2}{space2}|")
+            print(f"{space} _________________ ")
+    print("verdict")
+    time.sleep(1)
+counting()
+
+def arrested():
+
+    print("                                                                                                          ")
+    print("                                                                                             ")
+    print("             ##        ##                                                                                      ")
+    print("              ##     ##                       ##                                                           ")
+    print("               ##  ##     #####    ##    ##  ## ##  ###   ######                                           ")
+    print("                 ##    ##     ##  ##    ##  ## ## ##    ##     ##                                          ")
+    print("                ##    ##     ##  ##    ##     ##       ########                                           ")
+    print("               ##    ##     ##  ##    ##     ##       ##                                                 ")
+    print("              ##      #####     ######      ##        #######                                  ")
+    print("                                                                                      ")
+    print("                                        ##  ##    ##                                                  ")
+    print("                                           ##    #####                                                  ")
+    print("                  #####     ##    ##  ##  ##    ##    ##    ##                                                     ")
+    print("               ##      ##  ##    ##  ##  ##    ##    ##    ##                                                    ")
+    print("              ##      ##  ##    ##  ##  ##    ##    ##    ##                                                    ")
+    print("             ##      ##  ##    ##  ##  ##    ##    ##    ##                                                    ")
+    print("              #######    #####    ##   ####  #####  #####                                                                 ")
+    print("                  ##                                  ##                                            ")
+    print("                 ##                                  ##                                              ")
+    print("              ####                               ####                                              ")
+    print("                                                                                          ")
+    
+def guilty():
+    print("Well then. BUSTED!")
+    arrested()
+
+def free():
+    print("Get out of the KangaKourt! You won us this time!!!")
+    # freedom()
+
+def verdict():
+    global karma
+    if karma > 10:
+        free()
+    else:
+        guilty()
+
+verdict()
